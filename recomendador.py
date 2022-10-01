@@ -40,7 +40,7 @@ def recomendar(df):
             if i == 0:
                 print("\nHa elegido buscar por género de la película")
             i += 1
-            print("Posibles géneros: Action, Adventure, Animation, Children's, Comedy, Crime, Documentary, Drama, Fantasy, Film-Noir, Horror, Musical, Mystery, Romance, Sci-Fi, Thriller, War, Western\n")
+            print("Posibles géneros: Action, Adventure, Animation, Children's, Comedy, Crime, Documentary, Drama, Fantasy, Film-Noir, Horror, IMAX, Musical, Mystery, Romance, Sci-Fi, Thriller, War, Western\n")
             genero = input("Por favor, introduzca EN INGLÉS el género de la película ")
             regex = re.compile(genero, re.I)
             df_generos["genres"] = df_generos.apply(lambda row : buscar_peli_df(row["genres"], regex), axis = 1)
